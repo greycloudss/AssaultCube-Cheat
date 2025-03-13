@@ -1,7 +1,7 @@
-# AssaultCube Aimbot & ESP Cheat
+# AssaultCube Aimbot
 
 ## Overview
-This project is an educational exploration into memory manipulation and computer vision techniques applied to game environments. Specifically, it is designed for **AssaultCube 1.3.0.2**, demonstrating how one can interact with game memory to develop an **aimbot** and **ESP (Extra Sensory Perception)** system. The project highlights methods used in red teaming exercises for security research and ethical hacking.
+This project is an educational exploration into memory manipulation and computer vision techniques applied to game environments. Specifically, it is designed for **AssaultCube 1.3.0.2**, demonstrating how one can interact with game memory to develop an **aimbot**. The project highlights methods used in red teaming exercises for security research and ethical hacking.
 
 ## Features
 - **Aimbot**: Uses trigonometric calculations to adjust the player's view to target enemy heads.
