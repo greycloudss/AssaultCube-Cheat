@@ -48,7 +48,7 @@ namespace checkMemory {
             tmp.push_back(new entity(entity_ptr, checker));
         }
 
-        for (entity* e : entityVector) delete e;  // Free old entities
+        for (entity* e : entityVector) delete e;
         entityVector.clear();
         entityVector = tmp;
 
@@ -60,14 +60,13 @@ namespace checkMemory {
 
         while (!checker->getKillSwitch()) {
             uintptr_t playerBase = rpm<uintptr_t>(checker->baseAddress, offsets::LOCAL_PLAYER_OFFSET, checker);
-            if (localplayer) delete localplayer;  // Free old pointer
+            if (localplayer) delete localplayer;
             localplayer = new entity(playerBase, checker);
 
             updateEntityList(rpm<uintptr_t>(checker->baseAddress, offsets::ENTITY_LIST_OFFSET, checker), checker);
 
             std::cout << "[Debug] entityVector size: " << entityVector.size() << "\n";
 
-            wpm(playerBase, offsets::HEALTH_VALUE, 19, checker);
             std::cout << "[DEBUG] localplayer health: " << rpm<int>(playerBase, offsets::HEALTH_VALUE, checker) << "\n";
 
             Sleep(50);
